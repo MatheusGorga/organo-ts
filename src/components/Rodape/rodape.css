@@ -1,0 +1,29 @@
+.rodape {
+  background-image: url('../../../public/assets/fundo.png');
+  background-color: #6278F7;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rodape .rodape-itens {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 75px;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.rodape .rodape-itens img {
+  margin-left: 35px;
+}
+
+.rodape h5 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}

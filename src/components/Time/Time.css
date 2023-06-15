@@ -1,0 +1,34 @@
+.time {
+  padding: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.time h3 {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #212121;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.colaboradores {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.input-color {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}

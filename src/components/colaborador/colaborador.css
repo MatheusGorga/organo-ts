@@ -1,0 +1,54 @@
+.card-colaborador {
+  height: 272px;
+  width: 262px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-colaborador .cabecalho {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-colaborador img {
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -50px;
+}
+
+.colaborador-rodape {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 10px 10px;
+}
+
+.colaborador-rodape h4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6278F7;
+}
+
+.colaborador-rodape h5 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #212121;
+}
+
+.deletar {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.favoritar {
+  margin-top: 20px;
+}
