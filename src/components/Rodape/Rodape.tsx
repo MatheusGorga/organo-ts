@@ -2,6 +2,7 @@ import './rodape.css';
 
 function Rodape() {
   return (
+    <>
     <div className='rodape'>
       <div className='rodape-itens'>
         <section>
@@ -17,6 +18,7 @@ function Rodape() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 
