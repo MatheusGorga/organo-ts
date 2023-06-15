@@ -1,8 +1,24 @@
-import Colaborador from '../colaborador/Colaborador';
 import hexToRgba from 'hex-to-rgba';
 import './Time.css';
+import { IColaborador } from '../../shared/interfaces/IColaborador';
+import Colaborador from '../Colaborador/Colaborador';
 
-function Time({ time, mudarCor, aoDeletar, colaboradores, aoFavoritar }) {
+
+interface TimeProps{
+  colaboradores : IColaborador[] ,
+  mudarCor : (valor: string, valor2: string) => void,
+  aoDeletar : (valor: string) => void,
+  aoFavoritar: (valor: string) => void
+  time: {
+    id: string
+    nome: string
+    cor: string
+  }
+}
+
+
+function Time({ time, mudarCor, aoDeletar, colaboradores, aoFavoritar } : TimeProps) {
+
   return (
     colaboradores.length > 0 && (
       <section
@@ -27,7 +43,7 @@ function Time({ time, mudarCor, aoDeletar, colaboradores, aoFavoritar }) {
         </h3>
 
         <div className='colaboradores'>
-          {colaboradores.map((colaborador, indice) => {
+          {colaboradores.map((colaborador :any, indice :any ) => {
             return (
               <Colaborador
                 aoFavoritar={aoFavoritar}
