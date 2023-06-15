@@ -1,9 +1,9 @@
 import './Input.css';
 
 interface InputProps {
-  type: string,
+  type?: string,
   label: string,
-  obrigatorio : boolean,
+  obrigatorio ?: boolean,
   placeholder : string,
   aoAlterado : (valor: string) => void,
   valor: string,

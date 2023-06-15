@@ -3,10 +3,19 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa';
 import './Formulario.css';
+import { IColaborador } from '../../shared/interfaces/IColaborador';
+import { ITime } from '../../shared/interfaces/ITime';
 
-function Formulario(props) {
+interface  FormularioProps {
+  times: string[]
+  aoColaboradorCadastrado: (colaborador : IColaborador) => void
+  cadastrarTime: (time: ITime) => void
+}
+
+
+function Formulario(props:FormularioProps) {
+
   const OPTIONS = props.times;
-
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -14,7 +23,7 @@ function Formulario(props) {
   const [nomeTime, setNomeTime] = useState('');
   const [corTime, setCorTime] = useState('');
 
-  const aoSalvar = (e) => {
+  const aoSalvar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     props.aoColaboradorCadastrado({
       nome,
@@ -29,7 +38,7 @@ function Formulario(props) {
     setTime('');
   };
 
-  const aoSalvarNovoTime = (e) => {
+  const aoSalvarNovoTime = (e: any) => {
     e.preventDefault();
     props.cadastrarTime({
       nome: nomeTime,
@@ -71,7 +80,7 @@ function Formulario(props) {
           valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
-        <Button>Criar Card</Button>
+        <Button><span>Criar Card</span></Button>
       </form>
 
       <form onSubmit={aoSalvarNovoTime}>
@@ -92,7 +101,7 @@ function Formulario(props) {
           aoAlterado={(valor) => setCorTime(valor)}
         />
 
-        <Button>Criar Time</Button>
+        <Button><span>Criar Time</span></Button>
       </form>
     </section>
   );
